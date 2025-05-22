@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  min-height: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e3f2fd;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  max-height: 510px;
+  width: 400px;
+  height: 510px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.sub-con-1 {
+  text-align: center;
+  padding: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sub-con-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.sub-con-2 input {
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.sub-con-2 input:first-child {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  background: #f5f5f5;
+  color: #37474f;
+}
+
+.sub-con-2 input:last-child {
+  width: 60px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sub-con-2 input:last-child:hover {
+  background-color: #1565c0;
+}
+
+.task-container {
+  width: 95%;
+  margin: 0 auto;
+  overflow-y: auto;
+  max-height: 330px;
+  scrollbar-gutter: stable;
+}
+
+.task-container:hover {
+  overflow: auto;
+}
+
+.task-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.task-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+  background-color: rgba(137, 136, 136, 0.344);
+  border-radius: 5px;
+}
+
+.task-container div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 20px 10px 20px 0;
+}
+
+.task-container div input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #b0bec5;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.task-container div input::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #1976d2;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  opacity: 1;
+  transition: all 0.6s ease 0.2s;
+  z-index: 0;
+}
+
+.task-container div input:checked {
+  border-color: #1976d2;
+  background: #1976d2;
+  animation: check-zoom 0.6s ease;
+}
+
+.task-container div input:checked::before {
+  transform: scale(2.2);
+  opacity: 0;
+}
+
+.task-container div input:checked:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  z-index: 1;
+  transition: all 0.3s ease 0.1s;
+}
+
+@keyframes check-zoom {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.task-container label {
+  display: inline-block;
+  width: 75%;
+  font-size: 20px;
+  font-weight: 500;
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: #37474f;
+}
+
+.task-container label::-webkit-scrollbar {
+  height: 4px;
+}
+
+.task-container label::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.task-container label::-webkit-scrollbar-thumb {
+  background-color: rgba(137, 136, 136, 0.344);
+  border-radius: 4px;
+}
+
+.task-container button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.task-container button img {
+  opacity: 0.5;
+}
+
+.remover {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.remover button {
+  width: 95px;
+  height: 35px;
+  border-radius: 17px;
+  border: none;
+  background: #d32f2f;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.remover button:hover {
+  color: white;
+  background: #b71c1c;
+}

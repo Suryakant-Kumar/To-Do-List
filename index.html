@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="shortcut icon" href="resources/to-do-list.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="sub-con sub-con-1">ToDo-List</div>
+            <div class="sub-con sub-con-2">
+                <form action="" onsubmit="onSubmit(event)">
+                    <input type="text" class="task-field" placeholder="e.g Study JavaScript">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+                <div class="sub-con task-container">
+                    <div>
+
+                    </div>
+                </div>
+            <div class="remover">
+                <button class="task-clear" onclick="clearTask()">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
