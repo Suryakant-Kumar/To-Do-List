@@ -65,14 +65,6 @@ function showTask() {
       localStorage.setItem("task", JSON.stringify(tasks));
       showTask();
     });
-    removeBtn.addEventListener("click", () => {
-      tasks.splice(index, 1);
-      delete taskStatus[task];
-      localStorage.setItem("task", JSON.stringify(tasks));
-      localStorage.setItem("taskStatus", JSON.stringify(taskStatus));
-      showTask();
-    });
-
     sectors.appendChild(chck);
     sectors.appendChild(taskdisp);
     sectors.appendChild(removeBtn);
